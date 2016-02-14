@@ -632,12 +632,11 @@ font-weight:bold;
 
 #contact_form {
   width: 40em;
-  height: 33em;
+  height: 41em;
   padding: 0 1.5em 1.5em 1.5em;
   margin: 0 auto;
 }
-
-
+        
 /* Position the form in the middle of the window (if JavaScript is enabled) */
 
 #contact_form.positioned {
@@ -723,10 +722,14 @@ label {
   font-weight: bold;
 }
 
+div#recaptcha {
+  position:relative; 
+  left: 0px;
+}
 
 /* The fields */
 
-input, textarea {
+input, textarea{
   display: block;
   margin: 0;
   padding: .4em;

@@ -110,3 +110,9 @@ function submit_finished( response ) {
     $('#contact_form').delay(message_delay+500).fadeIn();
   }
 }
+  
+function syncerRecaptchaCallback( code ){
+    if(code != ""){
+        $('#contact_form input, #contact_form textarea, #send_message input').removeAttr('disabled') ;
+    }
+}

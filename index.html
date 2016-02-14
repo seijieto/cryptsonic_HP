@@ -19,6 +19,7 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/contact.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src='https://www.google.com/recaptcha/api.js?hi=en'></script>
 <meta name="google-site-verification" content="0vRoMSnEXZt-2sYMHUxf2DDoKA27TkuyRq1Tss4DW08" />
 </head>
 <body>
@@ -137,28 +138,27 @@
 <form id="contact_form" action="process_form.php" method="post">
 
   <h2>Send us an email...</h2>
-
+   <div id="recaptcha" class="g-recaptcha" data-callback="syncerRecaptchaCallback" data-sitekey="6LfJJRgTAAAAAObW3Tr0n0QJ13KZpCwAil01apjA"></div>
   <ul>
-
     <li>
       <label for="sender_name">Name:</label>
-      <input type="text" name="sender_name" id="sender_name" placeholder="Please type your name." required="required" maxlength="40" />
+      <input type="text" name="sender_name" id="sender_name" placeholder="Please type your name." required="required" maxlength="40" disabled />
     </li>
 
     <li>
       <label for="sender_email">Email Address:</label>
-      <input type="email" name="sender_email" id="sender_email" placeholder="Please type your email address." required="required" maxlength="50" />
+      <input type="email" name="sender_email" id="sender_email" placeholder="Please type your email address." required="required" maxlength="50" disabled />
     </li>
 
     <li>
       <label for="message" style="padding-top: .5em;">Message:</label>
-      <textarea name="message" id="message" placeholder="Please type your message." required="required" cols="80" rows="10" maxlength="10000"></textarea>
+      <textarea name="message" id="message" placeholder="Please type your message." required="required" cols="80" rows="10" maxlength="10000" disabled=""></textarea>
     </li>
 
   </ul>
 
   <div id="form_buttons">
-    <input type="submit" id="send_message" name="send_message" value="Send Email" />
+    <input type="submit" id="send_message" name="send_message" value="Send Email" disabled />
     <input type="button" id="cancel" name="cancel" value="Cancel" />
   </div>
 
